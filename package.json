@@ -2,9 +2,10 @@
   "name": "learningbackend",
   "version": "1.0.0",
   "description": "trying to learn backend",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "chai",
@@ -12,5 +13,9 @@
     "backend"
   ],
   "author": "Pratham Sharma",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.3",
+    "prettier": "^3.3.2"
+  }
 }
