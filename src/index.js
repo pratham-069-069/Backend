@@ -2,10 +2,18 @@ import mongoose from "mongoose";
 // import { DB_NAME } from "./constants";
 import express from "express"
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 
 
-connectDB();
-
+connectDB()
+.then(() => {
+    app.listen(process.env.PORT || 8000 , () => {
+        `Server is running at ${process.env.PORT}`
+    })
+})
+.catch((error) => {
+    console.log("MONGODB connection failed!!! " , error);
+})
 // use of iffy function
 /*
 const app = express()
