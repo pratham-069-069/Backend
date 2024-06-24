@@ -7,8 +7,10 @@ import { app } from "./app.js";
 
 connectDB()
 .then(() => {
-    app.listen(process.env.PORT || 8000 , () => {
-        `Server is running at ${process.env.PORT}`
+    app.listen( process.env.PORT || 8000 , () => {
+        console.log(
+        `Server is running at port ${process.env.PORT}`
+        )
     })
 })
 .catch((error) => {
@@ -35,4 +37,5 @@ const app = express()
         
     }
 })()
+    process.env.PORT || 8000
     */
